@@ -70,3 +70,4 @@ C:\Users\1075688\Tasks\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
 C:\Users\1075688\Tasks\obj\Debug\net8.0\Tasks.csproj.Up2Date
 C:\Users\1075688\Tasks\obj\Debug\net8.0\Tasks.genruntimeconfig.cache
 C:\Users\1075688\Tasks\obj\Debug\net8.0\ref\Tasks.dll
+C:\Users\1075688\Tasks\obj\Debug\net8.0\Tasks.sourcelink.json
