@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Tasks.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Tasks.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Tasks">
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+     <StackPanel Margin="10">
+        <!-- Task Entry Section -->
+        <TextBlock Text="Task Name" />
+        <TextBox Width="200" Text="{Binding TaskName}"/>
+
+        <TextBlock Text="Description" Margin="0,10,0,0"/>
+        <TextBox Text="{Binding TaskDescription}" Width="200" />
+
+        <TextBlock Text="Priority" Margin="0,10,0,0"/>
+        <ComboBox SelectedItem="{Binding TaskPriority}" Width="100">
+            <ComboBoxItem Content="1" />
+            <ComboBoxItem Content="2" />
+            <ComboBoxItem Content="3" />
+            <ComboBoxItem Content="4" />
+            <ComboBoxItem Content="5" />
+        </ComboBox>
+
+        <!-- Button to add task -->
+        <Button Content="Add Task" Command="{Binding AddTaskCommand}" Margin="0,10,0,0" Width="100" />
+
+        <!-- Task List Section -->
+        <TextBlock Text="Task List" Margin="0,20,0,0" FontWeight="Bold" />
+        <ListBox ItemsSource="{Binding TaskList}" Width="350" Height="150" />
+    </StackPanel>
+</Window>
